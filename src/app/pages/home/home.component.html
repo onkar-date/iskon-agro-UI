@@ -1,75 +1,68 @@
-<div class="container-fluid h-100">
-    <div class="row h-100">
-        <div class="col-12 h-100 p-0">
-            <mat-sidenav-container class="example-container" (backdropClick)="this.sidenav.close()" class="h-100">
-                <mat-sidenav #sidenav (keydown.escape)="this.sidenav.close()" disableClose>
+<mat-sidenav-container (backdropClick)="this.sidenav.close()" >
+    <mat-sidenav #sidenav (keydown.escape)="this.sidenav.close()" disableClose>
 
-                    <!-- Brand & Close Button -->
-                    <div class="d-flex justify-content-between bg-custom-primary p-2 text-white">
+        <!-- Brand & Close Button -->
+        <div class="d-flex justify-content-between bg-custom-primary p-2 text-white">
+            <div class="d-flex align-items-center">
+                <img src="assets/images/logo.png" alt="iskon_agro" class="logo mr-2">
+                <span class="h5 mb-0">Iskon Agro</span>
+            </div>
+            <button mat-icon-button (click)="this.sidenav.close()" class="mr-2">
+                <mat-icon>close</mat-icon>
+            </button>
+        </div>
+
+        <!-- Links -->
+        <div class="p-3 d-flex flex-column">
+            <button mat-button (click)="goToScreen(screens.PRODUCTS)">Products</button>
+            <button mat-button (click)="goToScreen(screens.CONTACT_US)">Contact Us</button>
+            <button mat-button (click)="goToScreen(screens.ABOUT_US)">About Us</button>
+        </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+
+        <div class="container-fluid">
+            <!-- Toolbar -->
+            <div class="row">
+                <div class="col-12 p-0">
+                    <mat-toolbar color="primary" class="justify-content-between" id="toolbar">
                         <div class="d-flex align-items-center">
-                            <img src="assets/images/logo.png" alt="iskon_agro" class="logo mr-2">
-                            <span class="h5 mb-0">Iskon Agro</span>
-                        </div>
-                        <button mat-icon-button (click)="this.sidenav.close()" class="mr-2">
-                            <mat-icon>close</mat-icon>
-                        </button>
-                    </div>
-
-                    <!-- Links -->
-                    <div class="p-3 d-flex flex-column">
-                        <button mat-button (click)="goToScreen(screens.PRODUCTS)">Products</button>
-                        <button mat-button (click)="goToScreen(screens.CONTACT_US)">Contact Us</button>
-                        <button mat-button (click)="goToScreen(screens.ABOUT_US)">About Us</button>
-                    </div>
-                </mat-sidenav>
-
-                <mat-sidenav-content>
-
-                    <!-- Toolbar -->
-                    <div class="row">
-                        <div class="col-12">
-                            <mat-toolbar color="primary" class="justify-content-between">
-                                <div class="d-flex align-items-center">
-                                    <button (click)="sidenav.open()" class="d-md-none d-xs-block" mat-icon-button
-                                        aria-label="icon-button with menu icon">
-                                        <mat-icon>menu</mat-icon>
-                                    </button>
-                                    <div>
-                                        <img src="assets/images/logo.png" alt="iskon_agro" class="logo mr-2">
-                                        <span>Iskon Agro</span>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <button mat-button (click)="showProducts()">
-                                        Products
-                                    </button>
-                                </div>
-                            </mat-toolbar>
-                        </div>
-                    </div>
-
-                    <!-- Content -->
-                    <div class="row">
-                        <div class="col-12">
-                            <router-outlet></router-outlet>
-                            <!-- <button class="scroll-to-top-btn" mat-mini-fab color="primary" (click)="scrollToTop()">
-                                <mat-icon>arrow_upward</mat-icon>
-                            </button> -->
-                        </div>
-                    </div>
-
-                    <!-- Footer -->
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="footer">
-                                <h1>footer</h1>
+                            <button (click)="sidenav.open()" class="d-md-none d-xs-block" mat-icon-button
+                                aria-label="icon-button with menu icon">
+                                <mat-icon>menu</mat-icon>
+                            </button>
+                            <div>
+                                <img src="assets/images/logo.png" alt="iskon_agro" class="logo mr-2">
+                                <span>Iskon Agro</span>
                             </div>
                         </div>
-                    </div>
-                </mat-sidenav-content>
-            </mat-sidenav-container>
+
+                        <div>
+                            <button mat-button (click)="showProducts()">
+                                Products
+                            </button>
+                        </div>
+                    </mat-toolbar>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="row">
+                <div class="col-12 p-0">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="row">
+                <div class="col-12 p-0">
+                    <app-footer></app-footer>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+
+
+    </mat-sidenav-content>
+</mat-sidenav-container>
 
