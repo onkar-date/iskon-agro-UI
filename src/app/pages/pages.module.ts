@@ -6,10 +6,12 @@ import { CommonModule } from '@angular/common';
 import { PagesRoutingModule } from './pages-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    ProductsComponent
   ],
   imports: [
     CommonModule,

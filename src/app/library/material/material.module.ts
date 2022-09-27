@@ -10,6 +10,9 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSelectModule } from '@angular/material/select';
+import { MatCardModule } from '@angular/material/card';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 const MATERIAL_COMPONENTS = [
   MatToolbarModule,
@@ -22,6 +25,9 @@ const MATERIAL_COMPONENTS = [
   MatInputModule,
   MatSidenavModule,
   MatSelectModule,
+  MatCardModule,
+  MatChipsModule,
+  MatExpansionModule,
 ];
 
 @NgModule({
