@@ -1,0 +1,35 @@
+<div class="container-fluid h-100">
+    <div class="row h-100">
+        <div class="col-12 h-100 p-0">
+            <mat-sidenav-container class="example-container" (backdropClick)="this.sidenav.close()" class=" h-100">
+                <mat-sidenav #sidenav (keydown.escape)="this.sidenav.close()" disableClose>
+
+                    <!-- Close Button -->
+                    <div class="d-flex justify-content-end mt-2">
+                        <button mat-icon-button (click)="this.sidenav.close()" class="mr-2">
+                            <mat-icon>close</mat-icon>
+                        </button>
+                    </div>
+                </mat-sidenav>
+
+                <mat-sidenav-content>
+                    <mat-toolbar color="primary">
+                        <button (click)="sidenav.open()" mat-icon-button class="example-icon"
+                            aria-label="Example icon-button with menu icon">
+                            <mat-icon>menu</mat-icon>
+                        </button>
+                        <span>Iskon Agro</span>
+                        <span class="example-spacer"></span>
+                        <button mat-icon-button class="example-icon favorite-icon"
+                            aria-label="Example icon-button with heart icon">
+                            <mat-icon>favorite</mat-icon>
+                        </button>
+                        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                            <mat-icon>share</mat-icon>
+                        </button>
+                    </mat-toolbar>
+                </mat-sidenav-content>
+            </mat-sidenav-container>
+        </div>
+    </div>
+</div>
