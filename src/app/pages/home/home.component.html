@@ -13,23 +13,49 @@
                 </mat-sidenav>
 
                 <mat-sidenav-content>
-                    <mat-toolbar color="primary">
-                        <button (click)="sidenav.open()" mat-icon-button class="example-icon"
-                            aria-label="Example icon-button with menu icon">
-                            <mat-icon>menu</mat-icon>
-                        </button>
-                        <span>Iskon Agro</span>
-                        <span class="example-spacer"></span>
-                        <button mat-icon-button class="example-icon favorite-icon"
-                            aria-label="Example icon-button with heart icon">
-                            <mat-icon>favorite</mat-icon>
-                        </button>
-                        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-                            <mat-icon>share</mat-icon>
-                        </button>
-                    </mat-toolbar>
+
+                    <!-- Toolbar -->
+                    <div class="row">
+                        <div class="col-12">
+                            <mat-toolbar color="primary" class="justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <button (click)="sidenav.open()" mat-icon-button class="example-icon"
+                                        aria-label="Example icon-button with menu icon">
+                                        <mat-icon>menu</mat-icon>
+                                    </button>
+                                    <span>Iskon Agro</span>
+                                </div>
+
+                                <div>
+                                    <button mat-button (click)="showProducts()">
+                                        Products
+                                    </button>
+                                </div>
+                            </mat-toolbar>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="row">
+                        <div class="col-12">
+                            <router-outlet></router-outlet>
+                            <!-- <button class="scroll-to-top-btn" mat-mini-fab color="primary" (click)="scrollToTop()">
+                                <mat-icon>arrow_upward</mat-icon>
+                            </button> -->
+                        </div>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="footer">
+                                <h1>footer</h1>
+                            </div>
+                        </div>
+                    </div>
                 </mat-sidenav-content>
             </mat-sidenav-container>
         </div>
     </div>
 </div>
+

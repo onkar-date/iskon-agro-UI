@@ -1,0 +1,159 @@
+<div class="container-fluid p-3">
+    <div class="row">
+        <div class="col-12">
+            <h2>Our Products</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mb-3" *ngFor="let product of products">
+            <mat-card class="example-card shadow-lg h-100">
+
+                <!-- Product Category -->
+                <mat-card-subtitle>{{product.category}}</mat-card-subtitle>
+
+                <!-- Product Name -->
+                <mat-card-title>
+                    <h3 class="font-weight-bold">{{product.name}}</h3>
+                </mat-card-title>
+
+                <mat-card-content>
+
+                    <!-- Product Image -->
+                    <div class="d-flex justify-content-center mb-3">
+                        <img class="product-img" src="assets/images/{{product.id}}.png" alt="{{product.name}}">
+                    </div>
+                    <!-- Description -->
+                    <p class="text-muted text-justify">
+                        {{product.description}}
+                    </p>
+
+                    <mat-accordion class="example-headers-align" multi>
+
+                        <!-- Specifications -->
+                        <mat-expansion-panel class="no-padding">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Specifications
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+
+                            <table class="table table-bordered mb-0" *ngIf="product.specification.byPercent.length">
+                                <thead>
+                                    <tr>
+                                        <th>Specification</th>
+                                        <th>(%) by weight</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let specification of product.specification.byPercent">
+                                        <td>
+                                            {{specification.name}}
+                                        </td>
+                                        <td>
+                                            {{specification.value}}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table class="table table-bordered mb-0 mt-2" *ngIf="product.specification.byWeight.length">
+                                <thead>
+                                    <tr>
+                                        <th>Specification</th>
+                                        <th>by weight</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let specification of product.specification.byWeight">
+                                        <td>
+                                            {{specification.name}}
+                                        </td>
+                                        <td>
+                                            {{specification.value}}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </mat-expansion-panel>
+
+                        <!-- Advantages -->
+                        <mat-expansion-panel class="no-padding" *ngIf="product.advantages.length">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Advantages
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+
+                            <ul>
+                                <li *ngFor="let advantage of product.advantages">
+                                    {{advantage}}
+                                </li>
+                            </ul>
+
+                        </mat-expansion-panel>
+
+                        <!-- For Best Results -->
+                        <mat-expansion-panel class="no-padding" *ngIf="product.forBestResults.length">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    For Best Results
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+
+                            <ul>
+                                <li *ngFor="let item of product.forBestResults">
+                                    {{item}}
+                                </li>
+                            </ul>
+
+                        </mat-expansion-panel>
+
+                        <!-- Doses -->
+                        <mat-expansion-panel class="no-padding">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Doses
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+
+                            <table class="table table-bordered mb-0">
+                                <tbody>
+                                    <tr *ngFor="let dose of product.doses">
+                                        <td>{{dose.name}}</td>
+                                        <td>{{dose.suggestion}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </mat-expansion-panel>
+                    </mat-accordion>
+
+
+                    <!-- Available Packaging -->
+                    <div class="mt-3">
+                        <h3 class="mb-1">
+                            Available Packaging
+                        </h3>
+                        <mat-chip-list>
+                            <mat-chip selected color="primary" *ngFor="let packaging of product.availablePackaging">
+                                {{packaging}}
+                            </mat-chip>
+                        </mat-chip-list>
+                    </div>
+
+                </mat-card-content>
+                <!-- <mat-divider inset></mat-divider> -->
+                <mat-card-actions>
+                    <button mat-button>LIKE</button>
+                    <button mat-button>SHARE</button>
+                </mat-card-actions>
+                <mat-card-footer>
+                    <!-- <mat-progress-bar mode="indeterminate"></mat-progress-bar> -->
+                </mat-card-footer>
+            </mat-card>
+        </div>
+
+
+    </div>
+</div>
