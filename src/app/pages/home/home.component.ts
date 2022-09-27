@@ -27,7 +27,9 @@ export class HomeComponent implements OnInit {
   goToScreen(screen: SCREENS): void {
     if (screen === SCREENS.PRODUCTS) {
       this.router.navigate(['home/products']);
-    } else {
+    } else if (screen === SCREENS.CONTACT_US) {
+      return;
+      this.router.navigate(['home/contact-us']);
     }
     this.sidenav.close();
   }
