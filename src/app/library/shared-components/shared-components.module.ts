@@ -4,8 +4,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ConfirmationPromptComponent } from './confirmation-prompt/confirmation-prompt.component';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
-  declarations: [ConfirmationPromptComponent],
+  declarations: [ConfirmationPromptComponent, FooterComponent],
   imports: [
     CommonModule,
     NgbModule,
@@ -13,6 +14,6 @@ import { ConfirmationPromptComponent } from './confirmation-prompt/confirmation-
     ReactiveFormsModule,
     MaterialModule,
   ],
-  exports: [MaterialModule, ConfirmationPromptComponent],
+  exports: [MaterialModule, ConfirmationPromptComponent, FooterComponent],
 })
 export class SharedComponentsModule {}

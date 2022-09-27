@@ -9,7 +9,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
 import { AppErrorHandlerService } from 'src/app-error-handler.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 @NgModule({
   declarations: [AppComponent, NavbarComponent],
   imports: [
@@ -25,7 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       closeButton: true,
       easing: 'ease-in',
       maxOpened: 1,
-      autoDismiss: true
+      autoDismiss: true,
     }),
     BrowserAnimationsModule,
   ],
