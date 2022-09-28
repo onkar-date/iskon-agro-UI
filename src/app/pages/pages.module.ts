@@ -7,8 +7,10 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
-  declarations: [HomeComponent, ProductsComponent],
+  declarations: [HomeComponent, ProductsComponent, ContactUsComponent],
   imports: [
     CommonModule,
     PagesRoutingModule,
@@ -16,6 +18,7 @@ import { ProductsComponent } from './products/products.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    NgbModule
   ],
 })
 export class PagesModule {}

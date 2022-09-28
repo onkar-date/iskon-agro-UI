@@ -5,8 +5,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ConfirmationPromptComponent } from './confirmation-prompt/confirmation-prompt.component';
 import { FooterComponent } from './footer/footer.component';
+import { CarouselComponent } from './carousel/carousel.component';
 @NgModule({
-  declarations: [ConfirmationPromptComponent, FooterComponent],
+  declarations: [ConfirmationPromptComponent, FooterComponent, CarouselComponent],
   imports: [
     CommonModule,
     NgbModule,
@@ -14,6 +15,6 @@ import { FooterComponent } from './footer/footer.component';
     ReactiveFormsModule,
     MaterialModule,
   ],
-  exports: [MaterialModule, ConfirmationPromptComponent, FooterComponent],
+  exports: [MaterialModule, ConfirmationPromptComponent, FooterComponent, CarouselComponent],
 })
 export class SharedComponentsModule {}

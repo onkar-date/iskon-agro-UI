@@ -1,0 +1,10 @@
+.slide-img {
+    height: 30rem;
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .slide-img {
+        height: 15rem;
+    }
+}
