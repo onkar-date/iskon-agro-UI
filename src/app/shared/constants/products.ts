@@ -1,9 +1,9 @@
 import { IProduct } from './../interface/product.interface';
 export const PRODUCT_TYPES = {
-  ALL:  'All Products',
+  ALL: 'All Products',
   LIQUID_FERTILIZER: 'Liquid Fertilizer',
-  WATER_SOLUBLE: 'Water Soluble Fertilizer'
-} 
+  WATER_SOLUBLE: 'Water Soluble Fertilizer',
+};
 export const PRODUCTS: IProduct[] = [
   // P101
   {
@@ -353,6 +353,351 @@ export const PRODUCTS: IProduct[] = [
       'Avoid spraying plants that are under stress',
       'Use spray at medium volume and try to avoid run-off',
       'Select NOP is generally compatible with pesticides and fertilizers. However, determine the compatibility with a jar test before mixing the products',
+    ],
+    doses: [
+      {
+        name: 'Foliar Application',
+        suggestion: '5 gm per liter of water',
+      },
+      {
+        name: 'Drip Fertigation',
+        suggestion: 'As per crop stage',
+      },
+    ],
+    availablePackaging: ['1 Kg', '5 Kg', '10 Kg', '25 Kg'],
+  },
+  // P108
+  {
+    id: 'P108',
+    name: 'CropFeed NPK 19:19:19',
+    category: PRODUCT_TYPES.WATER_SOLUBLE,
+    description:
+      'Cropfeed NPK 19:19:19 the product is free-flowing, fine crystalline multi nutrient fertilizer, which is fully soluble in water. It supplies essential macro nutrients (N.P.K) together to crops. It contains nitrogen in different forms needed gradually at different growth stage of crops, and soil nutrients such as Nitrogen, Phosphorus and Potassium in equal proportion. It is useful especially for healthy vegetative growth of plants. It is an excellent balanced nutrient source for Vegetable, Fruit Tree, Field Crops, Flowers, Turf and Gardening. It helps in improving reproductive and vegetative activities in the plant system.',
+    specification: {
+      byWeight: [],
+      byPercent: [
+        {
+          name: 'Total Nitrogen',
+          value: '19.00 (Min)',
+        },
+        {
+          name: 'Water soluble Phosphate (as P2O5)',
+          value: '19.00 (Min)',
+        },
+        {
+          name: 'Water soluble potash (as K2O)',
+          value: '19.00 (Min)',
+        },
+        {
+          name: 'Total chloride (as Cl) on dry basis',
+          value: '1.50 (Max)',
+        },
+        {
+          name: 'Arsenic (as as)',
+          value: '0.01 (Max)',
+        },
+        {
+          name: 'Lead (as pb)',
+          value: '0.003 (Max)',
+        },
+        {
+          name: 'cadmium (as cd)',
+          value: '0.0025 (Max)',
+        },
+        {
+          name: 'Sodium as NaCl on dry basis',
+          value: '0.5 (Max)',
+        },
+        {
+          name: 'Matter insoluble in water',
+          value: '0.5 (Max)',
+        },
+        {
+          name: 'Moisture',
+          value: '0.5 (Max)',
+        },
+      ],
+    },
+    advantages: [
+      'Fully water soluble',
+      'Consists of 100% plant macronutrients',
+      'Free of chloride, sodium and other detrimental elements of plants',
+      'Provide balanced and complete plant nutrition',
+      'Helps in vegetative growth, branching and flowering.',
+      'Contains the balance ratio of NPK.',
+      'Corrects deficiencies of nutrients.',
+    ],
+    forBestResults: [
+      'Dose range between 1% and 2%',
+      'Spray in the early morning or late afternoon',
+      'Avoid spraying plants that are under stress',
+      'Use spray at medium volume and try to avoid run-off',
+      'CropFeed - BALANCE is generally compatible with pesticides and fertilizers. However determine the compatibility with a jar test before mixing the product.',
+    ],
+    doses: [
+      {
+        name: 'Foliar Application',
+        suggestion: '5 gm per liter of water',
+      },
+      {
+        name: 'Drip Fertigation',
+        suggestion: 'As per crop stage',
+      },
+    ],
+    availablePackaging: ['1 Kg', '5 Kg', '10 Kg', '25 Kg'],
+  },
+  // P109
+  {
+    id: 'P109',
+    name: 'CropFeed N.P.K 13:40:13',
+    category: PRODUCT_TYPES.WATER_SOLUBLE,
+    description:
+      'Cropfeed N.P.K 13:40:13 the product is free-flowing, multi nutrient fertilizer, which is fully soluble in water. It supplies essential macro nutrients (N.P.K) together to crops. Made of high quality of ingredients, consists of 100% plant nutrients. Virtually free of chloride, sodium and other detrimental elements of plants. Provide balanced and complete plant nutrition which helps in vegetative growth, branching, and flowering. Its better absorption of other essential plant nutrients.',
+    specification: {
+      byWeight: [],
+      byPercent: [
+        {
+          name: 'Water soluble phosphorous (as P2O5)',
+          value: '40 (Min)',
+        },
+        {
+          name: 'Total Nitrogen',
+          value: '13 (Min)',
+        },
+        {
+          name: 'Water soluble potassium (as K2O)',
+          value: '13 (Min)',
+        },
+        {
+          name: 'Sodium as NaCl',
+          value: '0.5 (Max)',
+        },
+        {
+          name: 'Matter Insoluble',
+          value: '0.5 (Max)',
+        },
+        {
+          name: 'Total chloride (as Cl) on dry basis',
+          value: '1.5 (Max)',
+        },
+        {
+          name: 'Lead (as pb)',
+          value: '0.003 (Max)',
+        },
+        {
+          name: 'Cadmium (as cd)',
+          value: '0.0025 (Max)',
+        },
+        {
+          name: 'Arsenic (as as)',
+          value: '0.01 (Max)',
+        },
+        {
+          name: 'Moisture',
+          value: '0.5 (Max)',
+        },
+      ],
+    },
+    advantages: [
+      'Fully water soluble',
+      'Made of high quality ingredients',
+      'Consists of 100% plant macronutrients',
+      'Virtually free of chloride, sodium and other detrimental elements of plants.',
+      'Provide balanced and complete plant nutrition',
+      'Helps in vegetative growth, branching and flowering.',
+      'Helps in root growth and better absorption of other essential plant nutrients.',
+      'Corrects deficiencies of nutrients.',
+    ],
+    forBestResults: [
+      'Dose range between 1% and 2%',
+      'Spray in the early morning or late afternoon',
+      'Avoid spraying plants that are under stress',
+      'Use spray at medium volume and try to avoid run-off',
+      'Cropfeed - NPK 13-40-13 is generally compatible with pesticides and fertilizers. However determine the compatibility with a jar test before mixing the product',
+      'Use FertiflowTM 13-40-13 in the rooting of all crops, for better results, it can also be used during establishment stage of the crops',
+    ],
+    doses: [
+      {
+        name: 'Foliar Application',
+        suggestion: '5 gm per liter of water',
+      },
+      {
+        name: 'Drip Fertigation',
+        suggestion: 'As per crop stage',
+      },
+    ],
+    availablePackaging: ['1 Kg', '5 Kg', '10 Kg', '25 Kg'],
+  },
+  // P110
+  {
+    id: 'P110',
+    name: 'Cropfeed Potassium Sulphate 00:00:50',
+    category: PRODUCT_TYPES.WATER_SOLUBLE,
+    description:
+      'Cropfeed Potassium Sulphate 00:00:50 the product is free-flowing, fine crystalline multi nutrient fertilizer which is fully soluble in water. It contains sulphur which helps to improve shelf life of fruits. It is useful for development of fruit size, increases weight, sugar, colour formation and maintaining quality of fruit in all type of crops.',
+    specification: {
+      byWeight: [],
+      byPercent: [
+        {
+          name: 'Water soluble potassium (as K2O)',
+          value: '50 (Min)',
+        },
+        {
+          name: 'Sulphatesulphur (as S)',
+          value: '17.5 (Min)',
+        },
+        {
+          name: 'Sodium as NaCl',
+          value: '2 (Max)',
+        },
+        {
+          name: 'Total chloride (as Cl)',
+          value: '2.5 (Max)',
+        },
+        {
+          name: 'Moisture',
+          value: '1.5 (Max)',
+        },
+      ],
+    },
+    advantages: [
+      'Fully water soluble',
+      'Made of high quality ingredients',
+      'Consists of 100% plant nutrients.',
+      'Virtually free of chloride, sodium and other detrimental elements of plants.',
+      'Provide balanced and complete plant nutrition',
+      'Helps in vegetative growth, branching and flowering.',
+      'Contains the balance ratio of NPK.',
+      'Corrects deficiencies of nutrients.',
+    ],
+    forBestResults: [
+      'Dose range between 1% and 2%',
+      'Spray in the early morning or late afternoon',
+      'Avoid spraying plants that are under stress',
+      'Use spray at medium volume and try to avoid run-off',
+      'CropFeed - BALANCE is generally compatible with pesticides and fertilizers. However determine the compatibility with a jar test before mixing the product.',
+    ],
+    doses: [
+      {
+        name: 'Foliar Application',
+        suggestion: '5 gm per liter of water',
+      },
+      {
+        name: 'Drip Fertigation',
+        suggestion: 'As per crop stage',
+      },
+    ],
+    availablePackaging: ['1 Kg', '5 Kg', '10 Kg', '25 Kg'],
+  },
+  // P111
+  {
+    id: 'P111',
+    name: 'CropFeed Calcium Nitrate 15.5:0:0 + 18.5 Ca',
+    category: PRODUCT_TYPES.WATER_SOLUBLE,
+    description:
+      'Cropfeed Calcium Nitrate 15.5:0:0 + 18.5 Ca the product is a dense granular fertilizer which is fully soluble in water. It improves cell wall of plant cell which leads to better quality, shelf life of marketable produce. It helps plant to enhance tolerance against diseases and insect infection due to increased cells strength. It prevent cracking, rotting in fruit / vegetables and other crops. It contains Nitrogen in Nitrate from a preferred sources for most of fruits and field crops. It provide available Calcium along with nitrogen rapidly.',
+    specification: {
+      byWeight: [],
+      byPercent: [
+        {
+          name: 'Water soluble calcium (as ca)',
+          value: '18.5 (Min)',
+        },
+        {
+          name: 'Total nitrogen (Ammoniacal and Nitrate From)',
+          value: '15.5 (Min)',
+        },
+        {
+          name: 'Nitrate Nitrogen as N',
+          value: '14.5 (Max)',
+        },
+        {
+          name: 'Matter insoluble in water',
+          value: '1.5 (Max)',
+        },
+        {
+          name: 'Moisture',
+          value: '0.5 (Max)',
+        },
+      ],
+    },
+    advantages: [
+      'Fully water soluble',
+      'Made of high quality ingredients',
+      'Consists of 100% plant nutrients.',
+      'Virtually free of chloride, sodium and other detrimental elements of plants.',
+      'Provide balanced and complete plant nutrition',
+      'Helps in vegetative growth, branching and flowering.',
+      'Contains the balance ratio of NPK.',
+      'Corrects deficiencies of nutrients.',
+    ],
+    forBestResults: [
+      'Dose range between 1% and 2%',
+      'Spray in the early morning or late afternoon',
+      'Avoid spraying plants that are under stress',
+      'Use spray at medium volume and try to avoid run-off',
+      'CropFeed - BALANCE is generally compatible with pesticides and fertilizers. However determine the compatibility with a jar test before mixing the product.',
+    ],
+    doses: [
+      {
+        name: 'Foliar Application',
+        suggestion: '5 gm per liter of water',
+      },
+      {
+        name: 'Drip Fertigation',
+        suggestion: 'As per crop stage',
+      },
+    ],
+    availablePackaging: ['1 Kg', '5 Kg', '10 Kg', '25 Kg'],
+  },
+  // P112
+  {
+    id: 'P112',
+    name: 'CropFeed Boronated Calcium Nitrate Ca 17.0% N 14.5% B 0.2-0.3%',
+    category: PRODUCT_TYPES.WATER_SOLUBLE,
+    description:
+      'Crop feed Broron Calcium Nitrate Ca 17.0% N 14.5% B 0.2-0.3% supplies the soil nutrients such Calcium Nitrate in different proportion. Useful for all crops as a foliar spray, it helps in improving reproductive and vegetative activities in the plant system. Calcium nitrate fertilisers produce better fruits and vegetables. The calcium helps strengthen cell walls and the nitrate nitrogen is the sources preferred by fruits and vegetables and is readily available to plants.',
+    specification: {
+      byWeight: [],
+      byPercent: [
+        {
+          name: 'Water soluble Calcium',
+          value: '17 (Min)',
+        },
+        {
+          name: 'Total Nitrogen( Ammonical + Nitrate)',
+          value: '14.5 (Min)',
+        },
+        {
+          name: 'Total Nitrogen - N',
+          value: '13.5 (Min)',
+        },
+        {
+          name: 'Boron',
+          value: '0.2-0.3 (Max)',
+        },
+        {
+          name: 'Moisture',
+          value: '0.5 (Max)',
+        },
+      ],
+    },
+    advantages: [
+      'Fully water soluble',
+      'Made of high quality ingredients',
+      'Consists of 100% plant nutrients.',
+      'Virtually free of chloride, sodium and other detrimental elements of plants.',
+      'Provide balanced and complete plant nutrition',
+      'Helps in vegetative growth, branching and flowering.',
+      'Contains the balance ratio of NPK.',
+      'Corrects deficiencies of nutrients.',
+    ],
+    forBestResults: [
+      'Dose range between 1% and 2%',
+      'Spray in the early morning or late afternoon',
+      'Avoid spraying plants that are under stress',
+      'Use spray at medium volume and try to avoid run-off',
+      'CropFeed - BALANCE is generally compatible with pesticides and fertilizers. However determine the compatibility with a jar test before mixing the product.',
     ],
     doses: [
       {
