@@ -24,9 +24,9 @@
 
         <div class="container-fluid">
             <!-- Toolbar -->
-            <div class="row">
-                <div class="col-12 p-0">
-                    <mat-toolbar color="primary" class="justify-content-between" id="toolbar">
+            <div class="row shadow">
+                <div class="col-12 p-0 toolbar">
+                    <mat-toolbar color="primary" class="justify-content-between">
                         <div>
                             <img src="assets/images/logo.png" alt="iskon_agro" class="logo mr-2">
                             <span>Iskon Agro</span>
@@ -52,8 +52,9 @@
             </div>
 
             <!-- Content -->
-            <div class="row">
-                <div class="col-12 p-0">
+            <div class="row" id="mainContent">
+                <div class="col-12 p-0 main-content">
+                    <app-carousel></app-carousel>
                     <router-outlet></router-outlet>
                 </div>
             </div>

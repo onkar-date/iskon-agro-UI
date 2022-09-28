@@ -1,7 +1,23 @@
 <div class="container-fluid p-3">
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 d-flex justify-content-between">
             <h2>Our Products</h2>
+
+            <!-- Select Prodcu Type -->
+            <mat-form-field appearance="outline">
+                <mat-label>Product Type</mat-label>
+                <mat-select (selectionChange)="productTypeSelected()" [(value)]="selectedProductType">
+                    <mat-option [value]="productTypes.ALL">
+                        {{productTypes.ALL}}
+                    </mat-option>
+                    <mat-option [value]="productTypes.LIQUID_FERTILIZER">
+                        {{productTypes.LIQUID_FERTILIZER}}
+                    </mat-option>
+                    <mat-option [value]="productTypes.WATER_SOLUBLE">
+                        {{productTypes.WATER_SOLUBLE}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
         </div>
     </div>
     <div class="row">
@@ -18,14 +34,20 @@
 
                 <mat-card-content>
 
-                    <!-- Product Image -->
-                    <div class="d-flex justify-content-center mb-3">
-                        <img class="product-img" src="assets/images/{{product.id}}.png" alt="{{product.name}}">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <!-- Product Image -->
+                            <div class="d-flex justify-content-center mb-3">
+                                <img class="product-img" src="assets/images/{{product.id}}.png" alt="{{product.name}}">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <!-- Description -->
+                            <p class="text-muted text-justify">
+                                {{product.description}}
+                            </p>
+                        </div>
                     </div>
-                    <!-- Description -->
-                    <p class="text-muted text-justify">
-                        {{product.description}}
-                    </p>
 
                     <mat-accordion class="example-headers-align" multi>
 

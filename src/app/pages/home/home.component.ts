@@ -10,8 +10,6 @@ import { MatSidenav } from '@angular/material/sidenav';
 })
 export class HomeComponent implements OnInit {
   @ViewChild('sidenav') sidenav!: MatSidenav;
-  reason = '';
-
   screens = SCREENS;
   constructor(
     private router: Router,
