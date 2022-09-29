@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
   }
 
   onScroll(): void {
-    document.getElementById('toolbar')?.scrollIntoView({
+    document.getElementById('scrollPosition')?.scrollIntoView({
       behavior: 'smooth'
     });
   }

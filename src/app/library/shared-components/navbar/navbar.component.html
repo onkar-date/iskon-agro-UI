@@ -1,7 +1,12 @@
-<mat-toolbar color="primary" class="justify-content-between" id="toolbar">
-    <div>
-        <img src="assets/images/logo.png" alt="iskon_agro" class="logo mr-2">
-        <span>Iskon Agro</span>
+<mat-toolbar color="primary" class="toolbar d-flex justify-content-between">
+    <div class="d-flex">
+        <div (click)="goToScreen(screens.ABOUT_US)" role="button">
+            <img src="assets/images/logo.png" alt="iskon_agro" class="logo mr-2">
+            <span>Iskon Agro</span>
+        </div>
+        <button mat-button (click)="goToScreen(screens.ABOUT_US)" class="d-none d-md-block">
+            Home
+        </button>
     </div>
 
     <div class="d-none d-md-block">
@@ -10,9 +15,6 @@
         </button>
         <button mat-button (click)="goToScreen(screens.CONTACT_US)">
             Contact Us
-        </button>
-        <button mat-button (click)="goToScreen(screens.ABOUT_US)">
-            About Us
         </button>
     </div>
     <button (click)="openSidenav()" class="d-md-none d-sm-block" mat-icon-button
