@@ -7,45 +7,18 @@
 
     <div class="row">
 
-        <!-- Office Address -->
-        <div class="col-md-6 d-flex flex-column align-items-center mt-3">
-            <h2 class="mb-1">Office Address</h2>
-            <div class="text-monospace">
-                <div>
-                    S/n 187/1/1, Near Koregaon MIDC, Opp. Hotel Sai,
-                </div>
-                <div>
-                    Koregaon Rahimatpur Road,
-                </div>
-                <div>
-                    Tal - Koregaon, Dist- Satara, Maharashtra
-                </div>
-                <div>
-                    Pin Code - 415501
-                </div>
-            </div>
-        </div>
+        <div class="col-12 d-flex justify-content-around">
+            <button mat-button (click)="goToSection('products')">
+                Products
+            </button>
 
-        <!-- Warehouse Address -->
-        <div class="col-md-6 d-flex flex-column align-items-center mt-3">
-            <h2 class="mb-1">Warehouse Address</h2>
-            <div class="text-monospace">
-                <div>
-                    C/o Seacom Logistics,
-                </div>
-                <div>
-                    S.NO.41/1/A & 41/1/B
-                </div>
-                <div>
-                    PADGHE VILLAGE, KALOMBOLI,
-                </div>
-                <div>
-                    TALUKA PANVEL Dist - RAIGAD, MAHARASHTRA
-                </div>
-                <div>
-                    Pin Code: 410218.
-                </div>
-            </div>
+            <button mat-button (click)="goToSection('contact-us')">
+                Contact Us
+            </button>
+
+            <button mat-button (click)="goToSection('about-us')">
+                About Us
+            </button>
         </div>
     </div>
 </div>

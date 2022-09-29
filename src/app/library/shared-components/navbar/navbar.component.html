@@ -1,0 +1,22 @@
+<mat-toolbar color="primary" class="justify-content-between" id="toolbar">
+    <div>
+        <img src="assets/images/logo.png" alt="iskon_agro" class="logo mr-2">
+        <span>Iskon Agro</span>
+    </div>
+
+    <div class="d-none d-md-block">
+        <button mat-button (click)="showProducts()">
+            Products
+        </button>
+        <button mat-button (click)="goToScreen(screens.CONTACT_US)">
+            Contact Us
+        </button>
+        <button mat-button (click)="goToScreen(screens.ABOUT_US)">
+            About Us
+        </button>
+    </div>
+    <button (click)="openSidenav()" class="d-md-none d-sm-block" mat-icon-button
+        aria-label="icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+    </button>
+</mat-toolbar>
