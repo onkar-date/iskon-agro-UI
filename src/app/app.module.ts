@@ -1,5 +1,4 @@
 import { SharedComponentsModule } from './library/shared-components/shared-components.module';
-import { NavbarComponent } from './library/shared-components/navbar/navbar.component';
 import { PagesModule } from './pages/pages.module';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -10,7 +9,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { AppErrorHandlerService } from 'src/app-error-handler.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
-  declarations: [AppComponent, NavbarComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

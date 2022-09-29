@@ -41,12 +41,6 @@ img.logo{
     height: 3rem;
 }
 
-.toolbar {
-    position: fixed;
-    z-index: 99;
-    width: 100%;
-}
-
 .main-content {
-    margin-top: 4rem;
+    min-height: 32rem;
 }

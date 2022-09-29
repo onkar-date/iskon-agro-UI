@@ -11,10 +11,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 export class HomeComponent implements OnInit {
   @ViewChild('sidenav') sidenav!: MatSidenav;
   screens = SCREENS;
-  constructor(
-    private router: Router,
-    private activatedRoute: ActivatedRoute
-  ) {}
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {}
 
@@ -26,9 +23,16 @@ export class HomeComponent implements OnInit {
     if (screen === SCREENS.PRODUCTS) {
       this.router.navigate(['home/products']);
     } else if (screen === SCREENS.CONTACT_US) {
-      return;
       this.router.navigate(['home/contact-us']);
     }
+    this.sidenav.close();
+  }
+
+  openSidenav(): void {
+    this.sidenav.open();
+  }
+
+  closeSidenav(): void {
     this.sidenav.close();
   }
 }

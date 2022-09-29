@@ -1,15 +1,46 @@
-import { ToastrService } from 'ngx-toastr';
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  EventEmitter,
+  Output,
+} from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { SCREENS } from 'src/app/shared/constants/screen-constants';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styles: [],
+  styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
   username: string | undefined;
-  constructor(private toastr: ToastrService, private router: Router) {}
+  screens = SCREENS;
+  @Output() openSidenavEvent = new EventEmitter<void>();
+  @Output() closeSidenavEvent = new EventEmitter<void>();
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {}
+
+  showProducts(): void {
+    this.router.navigate(['products'], { relativeTo: this.activatedRoute });
+  }
+
+  goToScreen(screen: SCREENS): void {
+    if (screen === SCREENS.PRODUCTS) {
+      this.router.navigate(['home/products']);
+    } else if (screen === SCREENS.CONTACT_US) {
+      this.router.navigate(['home/contact-us']);
+    }
+    this.closeSidenav();
+  }
+
+  openSidenav(): void {
+    this.openSidenavEvent.emit();
+  }
+
+  closeSidenav(): void {
+    this.closeSidenavEvent.emit();
+  }
 }
