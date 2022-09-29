@@ -1,6 +1,6 @@
+import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './home/home.component';
-import { AuthGuard } from './../shared/guards/auth.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductsComponent } from './products/products.component';
@@ -11,6 +11,10 @@ const routes: Routes = [
     component: HomeComponent,
     children: [
       {
+        path: 'about-us',
+        component: AboutUsComponent
+      },
+      {
         path: 'products',
         component: ProductsComponent
       },
@@ -20,7 +24,7 @@ const routes: Routes = [
       },
       {
         path: '**',
-        redirectTo: 'products'
+        redirectTo: 'about-us'
       }
     ]
   },
