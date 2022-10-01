@@ -10,17 +10,16 @@ import { Component, OnInit } from '@angular/core';
 export class ProductsComponent implements OnInit {
   products: IProduct[] = PRODUCTS;
   productTypes = PRODUCT_TYPES;
-  selectedProductType: string = this.productTypes.ALL;
   constructor() {}
 
   ngOnInit(): void {}
 
-  productTypeSelected(): void {
-    if (this.selectedProductType === PRODUCT_TYPES.ALL) {
+  productTypeSelected(selectedType: string): void {
+    if (selectedType === PRODUCT_TYPES.ALL) {
       this.products = PRODUCTS;
     } else {
       this.products = PRODUCTS.filter((product) => {
-        return product.category === this.selectedProductType;
+        return product.category === selectedType;
       });
     }
   }

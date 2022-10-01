@@ -58,6 +58,10 @@ export const PRODUCTS: IProduct[] = [
       },
     ],
     availablePackaging: ['1 Ltr', '500 ml'],
+    images: {
+      large: 'P101',
+      small: 'P101_small'
+    }
   },
   // P102
   {
@@ -96,6 +100,10 @@ export const PRODUCTS: IProduct[] = [
       },
     ],
     availablePackaging: ['1 Ltr', '500 ml'],
+    images: {
+      large: 'P102',
+      small: 'P102'
+    }
   },
   // P103
   {
@@ -134,6 +142,10 @@ export const PRODUCTS: IProduct[] = [
       },
     ],
     availablePackaging: ['1 Ltr', '500 ml'],
+    images: {
+      large: 'P103',
+      small: 'P103'
+    }
   },
   // P104
   {
@@ -181,6 +193,10 @@ export const PRODUCTS: IProduct[] = [
       },
     ],
     availablePackaging: ['1 Ltr', '500 ml'],
+    images: {
+      large: 'P104',
+      small: 'P104'
+    }
   },
   // P105
   {
@@ -236,6 +252,10 @@ export const PRODUCTS: IProduct[] = [
       },
     ],
     availablePackaging: ['1 Kg', '5 Kg', '10 Kg', '25 Kg'],
+    images: {
+      large: 'P105',
+      small: 'P105_small'
+    }
   },
   // P106
   {
@@ -299,6 +319,10 @@ export const PRODUCTS: IProduct[] = [
       },
     ],
     availablePackaging: ['1 Kg', '5 Kg', '10 Kg', '25 Kg'],
+    images: {
+      large: 'P106',
+      small: 'P106_small'
+    }
   },
   // P107
   {
@@ -365,6 +389,10 @@ export const PRODUCTS: IProduct[] = [
       },
     ],
     availablePackaging: ['1 Kg', '5 Kg', '10 Kg', '25 Kg'],
+    images: {
+      large: 'P107',
+      small: 'P107_small'
+    }
   },
   // P108
   {
@@ -445,6 +473,10 @@ export const PRODUCTS: IProduct[] = [
       },
     ],
     availablePackaging: ['1 Kg', '5 Kg', '10 Kg', '25 Kg'],
+    images: {
+      large: 'P108',
+      small: 'P108_small'
+    }
   },
   // P109
   {
@@ -527,6 +559,10 @@ export const PRODUCTS: IProduct[] = [
       },
     ],
     availablePackaging: ['1 Kg', '5 Kg', '10 Kg', '25 Kg'],
+    images: {
+      large: 'P109',
+      small: 'P109_small'
+    }
   },
   // P110
   {
@@ -588,6 +624,10 @@ export const PRODUCTS: IProduct[] = [
       },
     ],
     availablePackaging: ['1 Kg', '5 Kg', '10 Kg', '25 Kg'],
+    images: {
+      large: 'P110',
+      small: 'P110_small'
+    }
   },
   // P111
   {
@@ -649,6 +689,10 @@ export const PRODUCTS: IProduct[] = [
       },
     ],
     availablePackaging: ['1 Kg', '5 Kg', '10 Kg', '25 Kg'],
+    images: {
+      large: 'P111',
+      small: 'P111_small'
+    }
   },
   // P112
   {
@@ -710,5 +754,9 @@ export const PRODUCTS: IProduct[] = [
       },
     ],
     availablePackaging: ['1 Kg', '5 Kg', '10 Kg', '25 Kg'],
+    images: {
+      large: 'P112',
+      small: 'P112_small'
+    }
   },
 ];

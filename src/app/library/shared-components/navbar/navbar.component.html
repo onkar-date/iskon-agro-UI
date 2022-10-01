@@ -4,14 +4,17 @@
             <img src="assets/images/logo.png" alt="iskon_agro" class="logo mr-2">
             <span>Iskon Agro</span>
         </div>
-        <button mat-button (click)="goToScreen(screens.ABOUT_US)" class="d-none d-md-block">
-            Home
-        </button>
     </div>
 
     <div class="d-none d-md-block">
+        <button mat-button (click)="goToScreen(screens.ABOUT_US)">
+            Home
+        </button>
         <button mat-button (click)="showProducts()">
             Products
+        </button>
+        <button mat-button (click)="goToScreen(screens.GALLERY)">
+            Gallery
         </button>
         <button mat-button (click)="goToScreen(screens.CONTACT_US)">
             Contact Us

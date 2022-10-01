@@ -10,8 +10,9 @@ import { ProductsComponent } from './products/products.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { GalleryComponent } from './gallery/gallery.component';
 @NgModule({
-  declarations: [HomeComponent, ProductsComponent, ContactUsComponent, AboutUsComponent],
+  declarations: [HomeComponent, ProductsComponent, ContactUsComponent, AboutUsComponent, GalleryComponent],
   imports: [
     CommonModule,
     PagesRoutingModule,

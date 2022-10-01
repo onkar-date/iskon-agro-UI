@@ -1,11 +1,11 @@
 export const CONTACT_DETAILS = {
-  MOBILE: '8308801919',
-  EMAIL: 'iskcon.agroind@gmail.com',
+  MOBILE: '6352420936',
+  EMAIL: 'info@iskonagro.com',
   OFFICE_ADDRESS: [
-    'S/n 187/1/1, Near Koregaon MIDC, Opp. Hotel Sai',
-    'Koregaon Rahimatpur Road',
-    'Tal - Koregaon, Dist - Satara, Maharashtra',
-    'Pin Code - 415501.'
+    'Sun Universe, N-602',
+    'Behind Navale IT Park',
+    'Wadagaon Budruk, Narhe',
+    'Pune 410041'
   ],
   WAREHOUSE_ADDRESS: [
     'C/o Seacom Logistics',

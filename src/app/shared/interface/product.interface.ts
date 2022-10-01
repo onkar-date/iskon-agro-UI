@@ -8,6 +8,10 @@ export interface IProduct {
   forBestResults: string[];
   doses: IDose[];
   availablePackaging: string[];
+  images: {
+    large: string;
+    small: string;
+  }
 }
 
 export interface ISpecification {

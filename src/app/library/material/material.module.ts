@@ -13,6 +13,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 const MATERIAL_COMPONENTS = [
   MatToolbarModule,
@@ -28,6 +29,7 @@ const MATERIAL_COMPONENTS = [
   MatCardModule,
   MatChipsModule,
   MatExpansionModule,
+  MatButtonToggleModule
 ];
 
 @NgModule({
