@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container about-us-wrapper">
     <div class="row mt-3">
         <div class="col-12">
             <img src="assets/images/company-name.png" alt="iskon_agro_industries" class="company-name">
@@ -7,38 +7,52 @@
 
     <!-- About Company -->
     <div class="row mt-3">
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="fade-right">
             <img src="assets/images/img1.jpg" class="about-us-img" alt="agriculture_img">
         </div>
 
-        <div class="col-md-6 mt-3 mt-md-0 d-flex flex-column justify-content-center">
+        <div class="col-md-6 mt-3 mt-md-0 d-flex flex-column justify-content-center" data-aos="fade-left">
             <h1 class="heading">
                 About Us
             </h1>
             <p class="text-muted text-justify">
-                Established in the year 2015, IskonAgro® is engaged in the Import & Marketing of Speciality agro-inputs
-                products. The Company is established by Mr. Samir Kumbhar (CEO and Managing Director), Agronomist by
-                Profession.
+                {{copmanyData.ABOUT_US}}
             </p>
         </div>
     </div>
 
-    <!-- About Products -->
+    <!-- Vision -->
     <div class="row mt-5 d-flex">
 
-        <div class="col-md-6 order-md-1">
+        <div class="col-md-6 order-md-1" data-aos="fade-left">
+            <img src="assets/images/img3.jpg" class="about-us-img" alt="agriculture_img">
+        </div>
+
+        <div class="col-md-6 mt-3 mt-md-0 order-md-0 d-flex flex-column justify-content-center" data-aos="fade-right    ">
+            <h1 class="heading">
+                Our Vision
+            </h1>
+            <p class="text-muted text-justify">
+                {{copmanyData.VISION}}
+            </p>
+        </div>
+
+
+    </div>
+
+    <!-- About Products -->
+    <div class="row mt-5">
+
+        <div class="col-md-6" data-aos="fade-right">
             <img src="assets/images/img2.jpg" class="about-us-img" alt="agriculture_img">
         </div>
 
-        <div class="col-md-6 mt-3 mt-md-0 order-md-0 d-flex flex-column justify-content-center">
+        <div class="col-md-6 mt-3 mt-md-0 d-flex flex-column justify-content-center" data-aos="fade-left">
             <h1 class="heading">
                 Our Products
             </h1>
             <p class="text-muted text-justify">
-                Our imported product range includes - NPK 100% Water Soluble Fertilizers, 100% Water Soluble Phosphorus
-                fertilizer MAP/MKP, 100% Water Soluble Sulphate of Potash & Potassium Nitrate & 100% Water Soluble
-                Granular Calcium Nitrate, 100% Water Soluble Speciality Chelated Micronutrients, Speciality Natural Herb
-                Based Crop Health Products, Organic Granular Fertilizer & Soil
+                {{copmanyData.ABOUT_PRODUCTS}}
             </p>
         </div>
 

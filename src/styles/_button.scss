@@ -37,3 +37,8 @@
     all: unset !important;
     cursor: pointer !important;
 }
+
+.toggle-btn.mat-button-toggle-checked {
+    background-color: $custom-primary;
+    color: white;
+}

@@ -1,0 +1,55 @@
+<div class="container-fluid p-3">
+    <div class="row my-3">
+        <div class="col-md-6">
+            <h1>Gallery</h1>
+        </div>
+
+        <!-- Categories -->
+        <div class="col-md-6 d-flex justify-content-md-end">
+            <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+                <mat-button-toggle class="toggle-btn" (click)="selectCategory(CATEGORIES.EVENT)">
+                    Event
+                </mat-button-toggle>
+                <mat-button-toggle class="toggle-btn" (click)="selectCategory(CATEGORIES.PLOT_DEVELOPMENT)">
+                    Plot Development
+                </mat-button-toggle>
+                <mat-button-toggle class="toggle-btn" (click)="selectCategory(CATEGORIES.ALL)">
+                    All
+                </mat-button-toggle>
+            </mat-button-toggle-group>
+        </div>
+    </div>
+
+    <!-- Event Photos -->
+    <div class="row" *ngIf="selectedCategory === CATEGORIES.EVENT">
+        <ng-container [ngTemplateOutlet]="Event"></ng-container>
+    </div>
+
+    <!-- Plot Development -->
+    <div class="row" *ngIf="selectedCategory === CATEGORIES.PLOT_DEVELOPMENT">
+        <ng-container [ngTemplateOutlet]="PlotDevelopment"></ng-container>
+    </div>
+
+    <!-- All -->
+    <div class="row" *ngIf="selectedCategory === CATEGORIES.ALL">
+        <ng-container [ngTemplateOutlet]="Event"></ng-container>
+        <ng-container [ngTemplateOutlet]="PlotDevelopment"></ng-container>
+    </div>
+
+</div>
+
+<ng-template #Event>
+    <div class="col-md-4 mb-3 d-flex justify-content-center" *ngFor="let img of EVENT_IMAGES">
+        <div class="poloroid">
+            <img src="assets/images/events/{{img}}.jpg" alt="image" class="gallery-img">
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #PlotDevelopment>
+    <div class="col-md-4 mb-3 d-flex justify-content-center" *ngFor="let img of PLOT_DEVELOPMENT_IMAGES">
+        <div class="poloroid">
+            <img src="assets/images/Plot Development/{{img}}.jpg" alt="image" class="gallery-img">
+        </div>
+    </div>
+</ng-template>

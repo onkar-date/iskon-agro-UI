@@ -15,6 +15,13 @@ export class FooterComponent implements OnInit {
 
   goToSection(section: string): void {
     this.router.navigate([`home/${section}`]);
+    this.onScroll();
+  }
+
+  onScroll(): void {
+    document.getElementById('scrollPosition')?.scrollIntoView({
+      behavior: 'smooth'
+    });
   }
 
 }

@@ -24,6 +24,10 @@ export class HomeComponent implements OnInit {
       this.router.navigate(['home/products']);
     } else if (screen === SCREENS.CONTACT_US) {
       this.router.navigate(['home/contact-us']);
+    } else if (screen === SCREENS.ABOUT_US) {
+      this.router.navigate(['home/about-us']);
+    } else if (screen === SCREENS.GALLERY) {
+      this.router.navigate(['home/gallery']);
     }
     this.sidenav.close();
   }

@@ -1,7 +1,10 @@
-<div class="container-fluid mt-1 p-5">
+<div class="bg-image">
+
+</div>
+<div class="container-fluid mt-1 bg-text">
     <div class="row">
         <div class="col-12">
-            <h1 class="d-flex justify-content-center">Contact Us</h1>
+            <h1 class="d-flex justify-content-center mt-3">Contact Us</h1>
         </div>
     </div>
 
@@ -11,14 +14,14 @@
             <div class="d-flex">
                 <mat-icon>mail</mat-icon>
                 <h3 class="mb-1 ml-2">
-                    iskcon.agroind@gmail.com
+                    {{CONTACT_DETAILS.EMAIL}}
                 </h3>
             </div>
 
-            <div class="d-flex border-bottom mt-2">
+            <div class="d-flex mt-2">
                 <mat-icon>phone</mat-icon>
                 <h3 class="mb-1 ml-2">
-                    8308801919
+                    {{CONTACT_DETAILS.MOBILE}}
                 </h3>
             </div>
         </div>
@@ -30,15 +33,13 @@
                 <mat-icon>place</mat-icon>
                 <h3 class="mb-1">Office Address:</h3>
             </div>
-            <p class="text-muted text-monospace">
-                S/n 187/1/1, Near Koregaon MIDC, Opp. Hotel Sai ,
-                <br>
-                Koregaon Rahimatpur Road,
-                <br>
-                Tal - Koregaon, Dist- Satara, Maharashtra
-                <br>
-                Pin Code - 415501
-                <br>
+            <p class="text-monospace">
+                <ng-container *ngFor="let item of CONTACT_DETAILS.OFFICE_ADDRESS; let last=last">
+                    <span>
+                        {{item}}{{last ? '' : ','}}
+                    </span>
+                    <br>
+                </ng-container>
             </p>
         </div>
     </div>
@@ -50,16 +51,13 @@
                 <mat-icon>place</mat-icon>
                 <h3 class="mb-1">Warehouse Address:</h3>
             </div>
-            <p class="text-muted text-monospace">
-                C/o Seacom Logistics,
-                <br>
-                S.NO.41/1/A & 41/1/B
-                <br>
-                PADGHE VILLAGE, KALOMBOLI
-                <br>
-                TALUKA PANVEL Dist - RAIGAD, MAHARASHTRA
-                <br>
-                Pin Code: 410218.
+            <p class="text-monospace">
+                <ng-container *ngFor="let item of CONTACT_DETAILS.WAREHOUSE_ADDRESS; let last=last">
+                    <span>
+                        {{item}}{{last ? '' : ','}}
+                    </span>
+                    <br>
+                </ng-container>
             </p>
         </div>
     </div>

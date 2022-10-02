@@ -1,26 +1,23 @@
 <div class="container-fluid p-3">
-    <div class="row mt-3">
+    <div class="row my-3">
         <div class="col-md-6">
             <h1>Our Products</h1>
         </div>
         <div class="col-md-6 d-flex justify-content-md-end">
-            <!-- Select Prodcuct Type -->
-            <mat-form-field appearance="outline">
-                <mat-label>Product Type</mat-label>
-                <mat-select (selectionChange)="productTypeSelected()" [(value)]="selectedProductType">
-                    <mat-option [value]="productTypes.ALL">
-                        {{productTypes.ALL}}
-                    </mat-option>
-                    <mat-option [value]="productTypes.LIQUID_FERTILIZER">
-                        {{productTypes.LIQUID_FERTILIZER}}
-                    </mat-option>
-                    <mat-option [value]="productTypes.WATER_SOLUBLE">
-                        {{productTypes.WATER_SOLUBLE}}
-                    </mat-option>
-                </mat-select>
-            </mat-form-field>
+            <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+                <mat-button-toggle class="toggle-btn" [value]="productTypes.WATER_SOLUBLE"
+                    (click)="productTypeSelected(productTypes.WATER_SOLUBLE)">100%
+                    Water Soluble
+                </mat-button-toggle>
+                <mat-button-toggle class="toggle-btn" [value]="productTypes.LIQUID_FERTILIZER"
+                    (click)="productTypeSelected(productTypes.LIQUID_FERTILIZER)">Liquid Fertilizers
+                </mat-button-toggle>
+                <mat-button-toggle class="toggle-btn" [value]="productTypes.ALL"
+                    (click)="productTypeSelected(productTypes.ALL)">All Products</mat-button-toggle>
+            </mat-button-toggle-group>
         </div>
     </div>
+
     <div class="row">
         <div class="col-md-6 mb-3" *ngFor="let product of products">
             <mat-card class="example-card shadow-lg h-100">
@@ -38,8 +35,14 @@
                     <div class="row">
                         <div class="col-md-4">
                             <!-- Product Image -->
-                            <div class="d-flex justify-content-center mb-3">
-                                <img class="product-img" src="assets/images/{{product.id}}.png" alt="{{product.name}}">
+                            <div class="d-flex justify-content-center align-items-end mb-3">
+                                <!-- Big -->
+                                <img class="product-img" src="assets/images/{{product.images.large}}.png"
+                                    alt="{{product.name}}">
+
+                                <!-- Small -->
+                                <img class="product-img_small" src="assets/images/{{product.images.small}}.png"
+                                    alt="{{product.name}}">
                             </div>
                         </div>
                         <div class="col-md-8">
@@ -159,7 +162,8 @@
                             Available Packaging
                         </h3>
                         <mat-chip-list>
-                            <mat-chip selected class="bg-custom-primary" *ngFor="let packaging of product.availablePackaging">
+                            <mat-chip selected class="bg-custom-primary"
+                                *ngFor="let packaging of product.availablePackaging">
                                 {{packaging}}
                             </mat-chip>
                         </mat-chip-list>
