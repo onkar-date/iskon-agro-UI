@@ -1,8 +1,10 @@
-<!-- <img src="assets/images/contact_bg.png" alt="" class=""> -->
-<div class="container-fluid mt-1 p-5">
+<div class="bg-image">
+
+</div>
+<div class="container-fluid mt-1 bg-text">
     <div class="row">
         <div class="col-12">
-            <h1 class="d-flex justify-content-center">Contact Us</h1>
+            <h1 class="d-flex justify-content-center mt-3">Contact Us</h1>
         </div>
     </div>
 
@@ -31,7 +33,7 @@
                 <mat-icon>place</mat-icon>
                 <h3 class="mb-1">Office Address:</h3>
             </div>
-            <p class="text-muted text-monospace">
+            <p class="text-monospace">
                 <ng-container *ngFor="let item of CONTACT_DETAILS.OFFICE_ADDRESS; let last=last">
                     <span>
                         {{item}}{{last ? '' : ','}}
@@ -49,7 +51,7 @@
                 <mat-icon>place</mat-icon>
                 <h3 class="mb-1">Warehouse Address:</h3>
             </div>
-            <p class="text-muted text-monospace">
+            <p class="text-monospace">
                 <ng-container *ngFor="let item of CONTACT_DETAILS.WAREHOUSE_ADDRESS; let last=last">
                     <span>
                         {{item}}{{last ? '' : ','}}

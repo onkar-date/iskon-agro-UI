@@ -40,12 +40,16 @@
 
 <ng-template #Event>
     <div class="col-md-4 mb-3 d-flex justify-content-center" *ngFor="let img of EVENT_IMAGES">
-        <img src="assets/images/events/{{img}}.jpg" alt="image" class="event-img shadow-lg">
+        <div class="poloroid">
+            <img src="assets/images/events/{{img}}.jpg" alt="image" class="gallery-img">
+        </div>
     </div>
 </ng-template>
 
 <ng-template #PlotDevelopment>
     <div class="col-md-4 mb-3 d-flex justify-content-center" *ngFor="let img of PLOT_DEVELOPMENT_IMAGES">
-        <img src="assets/images/Plot Development/{{img}}.jpg" alt="image" class="event-img shadow-lg">
+        <div class="poloroid">
+            <img src="assets/images/Plot Development/{{img}}.jpg" alt="image" class="gallery-img">
+        </div>
     </div>
 </ng-template>
